@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #343a40;
+    margin-top: 20px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+#video {
+    border: 2px solid #007bff;
+    width: 60%;
+    max-width: 800px;
+    height: auto;
+}

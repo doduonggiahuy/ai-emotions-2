@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %} <!-- Thêm dòng này -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Face Detection - YOLOv8</h1>
+    <div class="video-container">
+        <img id="video" src="/video_feed/" alt="Video Stream">
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
+
+
