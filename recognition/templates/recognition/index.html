@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static %} <!-- Thêm dòng này -->
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Face Detection</title>
+    <title>Camera Stream</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Face Detection - YOLOv8</h1>
-    <div class="video-container">
-        <img id="video" src="/video_feed/" alt="Video Stream">
+    <div class="sidebar">
+        <h2>RAINSCALES</h2>
+        <a href="#" class="active">
+            <span class="material-icons">cast</span>
+            Stream
+        </a>
+        <a href="#">
+            <span class="material-icons">event</span>
+            Camera Events
+        </a>
+        <a href="#">
+            <span class="material-icons">videocam</span>
+            Video
+        </a>
+        <a href="#">
+            <span class="material-icons">person</span>
+            Actor
+        </a>
+        <a href="#">
+            <span class="material-icons">camera_alt</span>
+            Camera
+        </a>
     </div>
-    <script src="{% static 'js/script.js' %}"></script>
+    <div class="content">
+        <h1>Camera Stream</h1>
+        {% if error %}
+        <div class="stream-box">
+            <p>Connection closed. Please refresh the page.</p>
+        </div>
+        {% else %}
+        <div class="stream-box">
+            <img src="/video_feed/" alt="Video Stream">
+        </div>
+        {% endif %}
+    </div>
 </body>
 </html>
-
-
